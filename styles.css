@@ -6,13 +6,12 @@ body {
 }
 
 div {
-  width: 800px;
-  height: 600px;
+  width: 80vw;
+  height: 40vh;
   border: 1px solid black;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 a {
@@ -23,6 +22,10 @@ a {
   border: 5px solid #272727;
   padding: 10px 20px;
   margin: 10px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* button 1 */
 .btn1 {
@@ -182,4 +185,161 @@ a {
 
 .btn5:hover:after {
   transform: translateY(0);
+}
+
+/* button 6 */
+.btn6 {
+  border: 3px solid #222;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.btn6:hover {
+  background-color: #f44336;
+}
+
+.btn6:before {
+  content: "";
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.btn6:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+/* button 7 */
+
+.btn7 {
+  border: 3px solid #222;
+  background-color: #262626;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.btn7:before {
+  content: "Smile!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  color: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.btn7:after {
+  content: "Smile!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  color: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+
+  transform: translate(-100%, 100%);
+}
+
+.btn7:hover:before {
+  transform: translate(100%, -100%);
+}
+
+.btn7:hover:after {
+  transform: translate(0, 0);
+}
+
+/* button 8 */
+.btn8 {
+  border: 3px solid #222;
+  background-color: #262626;
+  color: white;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.btn8:before {
+  content: "Super!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #262626;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn8:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* button 9 */
+
+.btn9 {
+  position: relative;
+  border: 3px solid #e1332d;
+  color: tomato;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  overflow: hidden;
+}
+
+.btn9:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+
+  z-index: -1;
+
+  border-radius: 0 0 50% 50%;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  height: 0%;
+}
+
+.btn9:hover {
+  color: white;
+}
+
+.btn9:hover:before {
+  height: 190%;
+  transform: translateY(0%);
+  color: white;
 }
