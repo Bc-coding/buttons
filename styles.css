@@ -8,7 +8,7 @@ body {
 div {
   width: 80vw;
   height: 40vh;
-  border: 1px solid black;
+  color: #222;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -19,9 +19,10 @@ a {
   color: #272727;
   font-family: sans-serif;
   font-size: 25px;
-  border: 5px solid #272727;
+  border: 3px solid #5c4d7d;
   padding: 10px 20px;
   margin: 10px 10px;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
@@ -33,7 +34,7 @@ a {
   color: #272727;
   font-family: sans-serif;
   font-size: 25px;
-  border: 5px solid #272727;
+  border: 5px solid #2e6f95;
   padding: 10px 20px;
   position: relative;
   overflow: hidden;
@@ -61,7 +62,7 @@ a {
 
 .btn2 {
   position: relative;
-  border: 5px solid #351435;
+  border: 5px solid #2e6f95;
   transition: all 1s;
   overflow: hidden;
 }
@@ -73,7 +74,7 @@ a {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #351435;
+  background-color: #2e6f95;
 
   z-index: -1;
   transform: translateX(100%);
@@ -419,7 +420,7 @@ a {
 }
 
 .btn11:before {
-  content: "Button";
+  content: "😎 ";
   position: absolute;
   top: 0;
   left: 0;
@@ -442,7 +443,7 @@ a {
 }
 
 .btn11:after {
-  content: "Button";
+  content: "🤭 ";
   position: absolute;
   top: 0;
   left: -100%;
@@ -559,7 +560,7 @@ a:hover {
   border: none;
   grid-column: 1 / span 2;
   text-align: center;
-  line-height: 60px;
+  line-height: 40px;
   letter-spacing: 2px;
   font-weight: bold;
 
@@ -611,4 +612,59 @@ a:hover {
 
 .btn13:hover {
   color: #272727;
+}
+
+/* button 15 */
+
+.btn15 {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+  grid-column: 4 / span 2;
+  position: relative;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s;
+}
+
+.btn15:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 120%;
+  top: -15%;
+  left: 5%;
+  border-left: 2px solid #0091ad;
+  border-right: 2px solid #b7094c;
+
+  transition: all 1s;
+}
+
+.btn15:after {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 80%;
+  top: 2%;
+  left: 2%;
+  border-top: 2px solid #0091ad;
+  border-bottom: 2px solid #b7094c;
+
+  transition: all 1s;
+}
+
+.btn15:hover {
+  color: #3d405b;
+}
+
+.btn15:hover:before {
+  transform: rotateY(180deg);
+}
+
+.btn15:hover:after {
+  transform: rotateX(180deg);
 }
