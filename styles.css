@@ -783,6 +783,90 @@ a:hover {
   background-color: aquamarine;
 }
 
+/* button 18 */
+
+.btn18 {
+  border: 2px solid #00aeff;
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: calc(100% + 22px);
+  background-color: #00aeff;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.btn18:hover .wave {
+  top: 0;
+  z-index: -1;
+}
+.wave:before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: url(wave.png);
+  animation: wavy 0.5s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 118px;
+  }
+}
+
+/* button 19 */
+.btn19 {
+  /* background-color: #081c15; */
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+}
+
+.btn19 span {
+  position: absolute;
+  width: 97%;
+  height: 94%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 2px solid black;
+  z-index: -1;
+}
+
+.btn19 span:before {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.2s;
+}
+
+.btn19:hover span:before {
+  width: 100%;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
 /* button 20 */
 
 .btn20 {
